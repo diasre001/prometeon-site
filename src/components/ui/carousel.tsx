@@ -8,7 +8,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/Button"
-import { Button } from "@/components/ui/Button"; // Verifique a exportação correta
+import Button from "@/components/ui/Button"; // Se Button for exportado como default
+
 
 
 type CarouselApi = UseEmblaCarouselType[1]
