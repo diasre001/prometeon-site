@@ -11,8 +11,8 @@ interface ButtonProps {
   className?: string;
 }
 
-// Variantes do botão
-export const buttonVariants = () => ({
+// Definindo 'buttonVariants' como exportação default
+const buttonVariants = () => ({
   primary: 'bg-[#1A2B5F] text-white hover:bg-[#0f1a3a] focus:ring-[#1A2B5F]',
   secondary: 'bg-[#E63946] text-white hover:bg-[#c5303b] focus:ring-[#E63946]',
   outline: 'bg-transparent border border-[#1A2B5F] text-[#1A2B5F] hover:bg-[#1A2B5F] hover:text-white focus:ring-[#1A2B5F]',
@@ -56,4 +56,5 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export { buttonVariants };  // Exportando o 'buttonVariants' separadamente
+export default Button;  // Exporte o 'Button' como default
