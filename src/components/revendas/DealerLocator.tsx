@@ -73,8 +73,10 @@ const DealerLocator = () => {
     'São Paulo', 'Sergipe', 'Tocantins'
   ];
 
-  const handleCepChange = (e) => {
-    let value = e.target.value;
+const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const value = e.target.value;
+  ...
+};
     
     // Remove caracteres não numéricos
     value = value.replace(/\D/g, '');
