@@ -73,4 +73,4 @@ function Calendar({
 }
 Calendar.displayName = "Calendar"
 
-export {
+export { Calendar }
