@@ -17,6 +17,7 @@ export const buttonVariants = (variant: 'primary' | 'secondary' | 'outline' = 'p
     primary: 'bg-[#1A2B5F] text-white hover:bg-[#0f1a3a] focus:ring-[#1A2B5F]',
     secondary: 'bg-[#E63946] text-white hover:bg-[#c5303b] focus:ring-[#E63946]',
     outline: 'bg-transparent border border-[#1A2B5F] text-[#1A2B5F] hover:bg-[#1A2B5F] hover:text-white focus:ring-[#1A2B5F]',
+    ghost: 'bg-transparent text-[#1A2B5F] hover:bg-[#f0f0f0] focus:ring-[#1A2B5F]', // Adicionando a classe "ghost"
   };
 
   return variantClasses[variant];
