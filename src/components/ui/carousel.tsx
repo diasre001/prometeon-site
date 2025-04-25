@@ -206,7 +206,6 @@ const CarouselPrevious = React.forwardRef<
   return (
     <Button
       ref={ref}
-      variant={variant}
       size={size}
       className={cn(
         "absolute  h-8 w-8 rounded-full",
