@@ -62,4 +62,5 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export { buttonVariants };
+export default Button;
 
