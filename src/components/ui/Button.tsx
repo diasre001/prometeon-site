@@ -11,12 +11,16 @@ interface ButtonProps {
   className?: string;
 }
 
-// Definindo 'buttonVariants' como exportação default
-const buttonVariants = () => ({
-  primary: 'bg-[#1A2B5F] text-white hover:bg-[#0f1a3a] focus:ring-[#1A2B5F]',
-  secondary: 'bg-[#E63946] text-white hover:bg-[#c5303b] focus:ring-[#E63946]',
-  outline: 'bg-transparent border border-[#1A2B5F] text-[#1A2B5F] hover:bg-[#1A2B5F] hover:text-white focus:ring-[#1A2B5F]',
-});
+// Função para retornar as classes do botão com base no variant
+export const buttonVariants = (variant: 'primary' | 'secondary' | 'outline' = 'primary') => {
+  const variantClasses = {
+    primary: 'bg-[#1A2B5F] text-white hover:bg-[#0f1a3a] focus:ring-[#1A2B5F]',
+    secondary: 'bg-[#E63946] text-white hover:bg-[#c5303b] focus:ring-[#E63946]',
+    outline: 'bg-transparent border border-[#1A2B5F] text-[#1A2B5F] hover:bg-[#1A2B5F] hover:text-white focus:ring-[#1A2B5F]',
+  };
+
+  return variantClasses[variant];
+};
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -29,8 +33,6 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   
-  const variantClasses = buttonVariants();  // Usando as variantes
-
   const sizeClasses = {
     sm: 'text-sm px-3 py-1.5',
     md: 'text-base px-4 py-2',
@@ -39,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({
   
   const widthClass = fullWidth ? 'w-full' : '';
   
-  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`;
+  const buttonClasses = `${baseClasses} ${buttonVariants(variant)} ${sizeClasses[size]} ${widthClass} ${className}`;
   
   if (href) {
     return (
@@ -56,5 +58,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export { buttonVariants };  // Exportando o 'buttonVariants' separadamente
-export default Button;  // Exporte o 'Button' como default
+export default Button;
