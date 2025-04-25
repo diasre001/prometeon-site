@@ -12,7 +12,9 @@ interface ButtonProps {
 }
 
 // Função para retornar as classes do botão com base no variant
-export const buttonVariants = (variant: 'primary' | 'secondary' | 'outline' = 'primary') => {
+const buttonVariants = (variant: "primary" | "secondary" | "outline" | "ghost" = "primary") => {
+   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+  
   const variantClasses = {
     primary: 'bg-[#1A2B5F] text-white hover:bg-[#0f1a3a] focus:ring-[#1A2B5F]',
     secondary: 'bg-[#E63946] text-white hover:bg-[#c5303b] focus:ring-[#E63946]',
