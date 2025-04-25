@@ -75,7 +75,6 @@ const DealerLocator = () => {
 
 const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   const value = e.target.value;
-  };
     
     // Remove caracteres não numéricos
     value = value.replace(/\D/g, '');
@@ -165,7 +164,7 @@ const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   <select className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1A2B5F]">
                     <option value="10">10 km</option>
                     <option value="25">25 km</option>
-                    <option value="50" selected>50 km</option>
+                    <option value="50">50 km</option>
                     <option value="100">100 km</option>
                     <option value="200">200 km</option>
                   </select>
